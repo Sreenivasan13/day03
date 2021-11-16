@@ -1,0 +1,204 @@
+1.For the given JSON iterate over all for loops (for, forEach, for of, for in)
+
+var books = [
+   {
+       "title": "Lord of the Rings",
+       "year": "1994",
+       "pages": "3000"
+   },
+   {
+       "title": "1984",
+       "year": "1984",
+       "pages": "2000"
+   },
+   {
+
+      "title" : "Art of war",
+       "year": "2000",
+       "pages": "5000"
+   }
+]
+
+
+1.For Loop
+
+for (i=0; i<books.length; i++){
+   document.write(
+       books.title + "<br />"
+   );
+}
+
+‍ O/p : Lord of the Rings
+       1984
+       Art Of War
+
+2. forEach
+
+books.forEach((v, i) => {
+        console.log(books.title);
+})
+
+var names = ["jerry", "tom", "pluto", "micky", "mini"];
+names.forEach(function1);
+function function1(currentValue, index) {
+   console.log("Index in array is: "+index + " ::  Value is: "+currentValue);
+}
+
+3. for-of
+
+for (let x of books) {
+   console.log(x + ": "+ books[x]);
+}
+
+4. for-in
+
+for (let x in books) {
+   console.log(x + ": "+ books[x]);
+}
+
+Both for..of and for..in statements iterate over lists; the values iterated on are different though, for..in returns a list of keys on the object being iterated, whereas for..of returns a list of values of the numeric properties of the object being iterated.
+
+let list = [4, 5, 6];
+
+for (let i in list) {
+   console.log(i); // "0", "1", "2",
+}
+
+for (let i of list) {
+   console.log(i); // "4", "5", "6"
+}
+
+
+2.Create your own resume data in JSON format
+
+{
+  "basics": {
+    "name": "Sreenivasan",
+    "label": "Programmer",
+    "image": "",
+    "email": "sreesreeni09@gmail.com",
+    "phone": "+91-8807813297",
+    "url": "https://sreenikurup.com",
+    "summary": "A summary of Sreenivasan…",
+    "location": {
+      "address": "15 Aathi Moolam Pillai Lane",
+      "postalCode": "TN 625009",
+      "city": "Madurai",
+      "countryCode": "IN",
+      "region": "Tamilnadu"
+    },
+    "profiles": [{
+      "network": "Twitter",
+      "username": "sreeni",
+      "url": "https://twitter.com/sreeni"
+    }]
+  },
+  "work": [{
+    "name": "Google",
+    "position": "Technical Lead",
+    "url": "https://google.com",
+    "startDate": "2018-01-01",
+    "endDate": "2021-01-01",
+    "summary": "Description…",
+    "highlights": [
+      "Started the company"
+    ]
+  }],
+  "volunteer": [{
+    "organization": "navy",
+    "position": "Volunteer",
+    "url": "https://navy.com/",
+    "startDate": "2017-01-01",
+    "endDate": "2018-01-01",
+    "summary": "Description…",
+    "highlights": [
+      "Awarded 'Volunteer of the Month'"
+    ]
+  }],
+  "education": [{
+    "institution": "SRM University",
+    "url": "https://srminstitution.com/",
+    "area": "Software Development",
+    "studyType": "Bachelor",
+    "startDate": "2014-01-01",
+    "endDate": "2018-01-01",
+    "score": "9.0",
+    "courses": [
+      "DB1101 - Basic SQL"
+    ]
+  }],
+  "awards": [{
+    "title": "Award",
+    "date": "2014-11-01",
+    "awarder": "Company",
+    "summary": "There is no spoon."
+  }],
+  "publications": [{
+    "name": "Publication",
+    "publisher": "Company",
+    "releaseDate": "2014-10-01",
+    "url": "https://publication.com",
+    "summary": "Description…"
+  }],
+  "skills": [{
+    "name": "Web Development",
+    "level": "Master",
+    "keywords": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ]
+  }],
+  "languages": [{
+    "language": "English",
+    "fluency": "Native speaker"
+  }],
+  "interests": [{
+    "name": "Wildlife",
+    "keywords": [
+      "Ferrets",
+      "Unicorns"
+    ]
+  }],
+  "references": [{
+    "name": "Jane Doe",
+    "reference": "Reference…"
+  }],
+  "projects": [{
+    "name": "Project",
+    "description": "Description…",
+    "highlights": [
+      "Won award at AIHacks 2016"
+    ],
+    "keywords": [
+      "HTML"
+    ],
+    "startDate": "2019-01-01",
+    "endDate": "2021-01-01",
+    "url": "https://project.com/",
+    "roles": [
+      "Team Lead"
+    ],
+    "entity": "Entity",
+    "type": "application"
+  }]
+}
+
+
+3.Read about the difference between window, screen and document in javascript
+
+Window is the main JavaScript object root, aka the global object in a browser, and it can also be treated as the root of the document object model. You can access it as window.
+
+window.screen or just screen is a small information object about physical screen dimensions.
+
+window.document or just document is the main object of the potentially visible (or better yet: rendered) document object model/DOM.
+
+
+window is the execution context and global object for that context's JavaScript
+
+document contains the DOM, initialized by parsing HTML
+
+screen describes the physical display's full screen
+
+
+4.Codekata practice
